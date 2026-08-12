@@ -1,0 +1,127 @@
+@import "tailwindcss";
+
+@theme {
+  /* Vitasilk Blue Silk — midnight blue palette (midnight / royal / gold) */
+  --color-midnight: #0a1020; /* page background */
+  --color-navy: #101c33; /* alternating section background */
+  --color-navy-deep: #060b16; /* deepest full-bleed band */
+  --color-navy-light: #16233c; /* elevated surfaces: cards, pills, chips */
+
+  /* royal is a SURFACE colour: 1.85:1 on midnight. Fills, borders, gradient
+     stops and glows only — it can never carry text at any size. */
+  --color-royal: #1e3a8a;
+  /* azure is the text-capable blue — 7.9:1 on midnight. */
+  --color-azure: #7ea8e8;
+
+  --color-gold: #c9a227;
+  --color-gold-light: #e8c86a;
+  --color-gold-deep: #a8862a;
+
+  --color-silk: #eef2fa; /* body text — 17:1 on midnight */
+  --color-silk-dim: #b9c4d8; /* secondary text — 10.9:1 on midnight */
+
+  --font-display: var(--font-marcellus), var(--font-reem-kufi), serif;
+  --font-body: var(--font-jost), var(--font-tajawal), sans-serif;
+
+  --animate-shimmer: shimmer 2.8s linear infinite;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-glow: glow 2.4s ease-in-out infinite;
+
+  @keyframes shimmer {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-14px); }
+  }
+  /* On midnight a true gold glow reads. The light-theme sibling had to fake this
+     with a warm drop shadow plus an expanding ring, because a gold glow is
+     invisible on ivory — that workaround is unnecessary here. */
+  @keyframes glow {
+    0%, 100% {
+      box-shadow: 0 0 22px -6px rgba(201, 162, 39, 0.55), 0 0 0 0 rgba(201, 162, 39, 0.4);
+    }
+    50% {
+      box-shadow: 0 0 38px -4px rgba(232, 200, 106, 0.75), 0 0 0 12px rgba(201, 162, 39, 0);
+    }
+  }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-midnight);
+  color: var(--color-silk);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+/* Arabic mode: swap font stacks so AR glyphs lead */
+[dir="rtl"] body,
+[dir="rtl"] {
+  --font-display: var(--font-reem-kufi), var(--font-marcellus), sans-serif;
+  --font-body: var(--font-tajawal), var(--font-jost), sans-serif;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* Gold gradient text.
+   The contrast rule here is the INVERSE of the light-theme sibling project: on
+   midnight (#0a1020) the brand gold #c9a227 measures 7.9:1, so gold carries
+   text at any size and this ramp needs no size floor.
+
+   The rule this palette ADDS is about the blues, not the golds. `royal`
+   (#1e3a8a) is a dark blue — 1.85:1 on midnight — so it is a surface, border
+   and gradient colour only. `azure` (#7ea8e8) is the blue that carries text.
+
+   The tightest pair on the palette is gold-deep on navy-light at 4.56:1, which
+   is why navy-light is #16233c and not something lighter: at #1a2a47 that pair
+   measures 4.17:1 and fails AA. Do not lighten the elevated surfaces. */
+.text-gold-gradient {
+  background: linear-gradient(100deg, #a8862a 0%, #e8c86a 35%, #f6e3a1 50%, #e8c86a 65%, #a8862a 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.text-gold-shimmer {
+  background: linear-gradient(100deg, #a8862a 0%, #e8c86a 30%, #fff3c4 50%, #e8c86a 70%, #a8862a 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: var(--animate-shimmer);
+}
+
+/* Fine gold hairline borders */
+.border-gold-hairline {
+  border: 1px solid rgba(232, 200, 106, 0.28);
+}
+
+/* Radial vignette behind the hero bottle. Royal blue at the core rather than
+   gold: the product is itself royal blue, so a warm halo leaves it sitting flat
+   against the near-black ground. The blue lifts the silhouette and the gold
+   mid-stop keeps it tied to the brand ramp. */
+.gold-halo {
+  background: radial-gradient(closest-side, rgba(30, 58, 138, 0.55), rgba(201, 162, 39, 0.16) 52%, transparent 78%);
+}
+
+/* Elevation is black-based — the light theme's warm shadow is invisible against
+   midnight. */
+.shadow-luxe {
+  box-shadow: 0 18px 45px -20px rgba(0, 0, 0, 0.55), 0 2px 8px -4px rgba(0, 0, 0, 0.4);
+}
+
+::selection {
+  background: rgba(201, 162, 39, 0.32);
+  color: var(--color-silk);
+}
