@@ -159,20 +159,20 @@ export const fr = {
     subtitle: "Plus de 12 000 clientes satisfaites au Maroc",
     items: [
       {
-        name: "Salma — Casablanca",
+        name: "Asmae — Kénitra",
         text: "J'ai les cheveux bouclés et secs, et le démêlage était une bataille tous les matins. Depuis, le peigne passe beaucoup plus facilement — c'est ça qui a changé mes matins, pas seulement la brillance.",
       },
       {
-        name: "Imane — Rabat",
+        name: "Soukaina — Oujda",
         text: "Ce qui m'a convaincue, c'est l'argan. On connaît toutes son effet, et là il tient vraiment : mes cheveux sont encore doux au troisième lavage.",
       },
       {
-        name: "Khadija — Marrakech",
+        name: "Btissam — Salé",
         text: "Je suis coiffeuse et je l'utilise en cabine. L'application est confortable, et mes clientes remarquent la douceur avant même que je sorte le fer.",
       },
       {
-        name: "Sara — Tanger",
-        text: "Avec l'humidité de Tanger, mes cheveux gonflaient à peine sortie de chez moi. Depuis le Blue Silk, ils restent bien plus disciplinés toute la journée.",
+        name: "Hanane — Essaouira",
+        text: "Avec l'humidité d'Essaouira, mes cheveux gonflaient à peine sortie de chez moi. Depuis le Blue Silk, ils restent bien plus disciplinés toute la journée.",
       },
     ],
   },
