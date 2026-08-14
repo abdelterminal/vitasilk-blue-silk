@@ -39,11 +39,11 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: "Vitasilk Blue Silk — Protéine Brésilienne à l'Argan 1L | بروتين برازيلي بالأركان",
   description:
-    "Vitasilk Blue Silk 1L — soin professionnel à l'huile d'argan marocaine et à l'aloe vera, porté par la protéine brésilienne. Sans formol ni acide glyoxylique. Douceur soyeuse, brillance miroir et hydratation profonde. Livraison gratuite au Maroc, paiement à la livraison.",
+    "Vitasilk Blue Silk 1L — soin professionnel à l'huile d'argan marocaine et à l'aloe vera, porté par la protéine brésilienne. Sans formol ni acide glyoxylique. Douceur soyeuse, brillance et hydratation. Livraison gratuite au Maroc, paiement à la livraison.",
   openGraph: {
     title: "Vitasilk Blue Silk — Protéine Brésilienne à l'Argan 1L",
     description:
-      "L'argan marocain et l'aloe vera portés par la protéine brésilienne. Sans formol, sans acide glyoxylique. Des cheveux soyeux, hydratés et éclatants. Livraison gratuite au Maroc — paiement à la livraison.",
+      "L'argan marocain et l'aloe vera portés par la protéine brésilienne. Sans formol, sans acide glyoxylique. Des cheveux plus souples, plus doux et plus brillants. Livraison gratuite au Maroc — paiement à la livraison.",
     // dimensions come from the file, so they cannot drift out of sync with it
     images: [{ url: ogImage.src, width: ogImage.width, height: ogImage.height }],
     locale: "ar_MA",
