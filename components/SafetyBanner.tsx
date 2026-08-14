@@ -40,7 +40,7 @@ export function SafetyBanner() {
                   <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden>{SHIELD}</svg>
                 </span>
                 <h3 className="font-display text-xl text-silk">{item.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-silk-dim">{item.desc}</p>
+                <p className="mt-2 text-base leading-relaxed text-silk-dim">{item.desc}</p>
               </div>
             </Reveal>
           ))}

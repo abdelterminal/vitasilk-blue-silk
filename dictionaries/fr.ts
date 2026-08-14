@@ -8,6 +8,11 @@
 // leads on Amazon/Brazil sourcing; Blue Silk leads on Moroccan argan, with the
 // Brazilian protein as the carrier. That is deliberate — argan is a local
 // trust signal for this audience, and it is what separates the two SKUs.
+//
+// Claims are phrased as "aide à" / "contribue à" rather than as mechanisms the
+// product performs on the hair ("referme l'écaille", "fait entrer l'eau"). The
+// copy review flagged every such formulation as an unverifiable technical
+// promise; the hedged wording is the version that was signed off.
 
 export const fr = {
   announce: "Livraison gratuite partout au Maroc — Paiement à la livraison",
@@ -17,11 +22,11 @@ export const fr = {
     title1: "Blue",
     title2: "Silk",
     subtitle:
-      "L'huile d'argan marocaine et l'aloe vera, portées par la protéine brésilienne. La fibre se referme, les frisottis se calment, la lumière revient — sans formol.",
-    cta: (price: string) => `Je commande — ${price}`,
-    badge1: "0% Formol",
-    badge2: "1 L — Format Salon",
-    badge3: "Argan & Aloe Vera",
+      "Une formule associant l'huile d'argan marocaine, l'aloe vera et la protéine brésilienne. Elle aide à réduire les frisottis et à améliorer la douceur et la brillance des cheveux — sans formol.",
+    cta: (price: string) => `Commander — ${price}`,
+    badge1: "0 % de formol",
+    badge2: "1 L — format professionnel",
+    badge3: "Argan & aloe vera",
     scroll: "Découvrir",
   },
   marquee: [
@@ -29,13 +34,13 @@ export const fr = {
     "Aloe vera",
     "Protéine brésilienne",
     "Sans formol",
-    "Brillance miroir",
-    "Format salon 1 L",
+    "Brillance intense",
+    "Format professionnel 1 L",
   ],
   problem: {
     title: "Des cheveux secs ne manquent pas d'huile. Ils manquent d'eau et de protéines.",
     subtitle:
-      "Le fer, le soleil, la coloration, l'eau calcaire : les écailles se soulèvent, l'hydratation s'échappe, et la fibre devient rêche. On empile les huiles en surface pendant que l'intérieur reste vide.",
+      "Le fer, le soleil, la coloration, l'eau calcaire : les écailles se soulèvent, l'hydratation s'échappe, et la fibre devient rêche. Les huiles peuvent améliorer l'apparence de la surface, sans répondre à tous les besoins des cheveux fragilisés.",
     points: [
       "Frisottis qui reviennent dès qu'il y a de l'humidité",
       "Cheveux rêches et secs, difficiles à démêler",
@@ -44,16 +49,16 @@ export const fr = {
     ],
     promiseTitle: "La promesse Blue Silk",
     promise:
-      "Hydrater, reconstruire, puis sceller. L'aloe vera fait entrer l'eau, la protéine brésilienne hydrolysée comble les brèches de la fibre, et l'huile d'argan referme l'écaille par-dessus. C'est cet ordre-là qui fait tenir le résultat — pas la quantité d'huile.",
+      "Hydrater, apporter des protéines, puis lisser la surface. L'aloe vera aide à maintenir l'hydratation, la protéine brésilienne hydrolysée contribue à améliorer l'apparence de la fibre, et l'huile d'argan aide à nourrir les longueurs et à leur donner un aspect plus lisse. C'est cet ordre-là qui compte — pas la quantité d'huile.",
   },
   safety: {
     title: "Sans formol. Sans acide glyoxylique.",
     subtitle:
-      "Un soin protéiné professionnel que vous pouvez répéter sereinement, saison après saison.",
+      "Un soin protéiné professionnel à utiliser en respectant les instructions et les précautions indiquées.",
     items: [
       {
         title: "Sans formol",
-        desc: "Pas de vapeurs irritantes pour les yeux ni pour les voies respiratoires.",
+        desc: "Une formule conçue pour offrir une expérience d'application plus confortable.",
       },
       {
         title: "Sans acide glyoxylique",
@@ -61,7 +66,7 @@ export const fr = {
       },
       {
         title: "Tous types de cheveux",
-        desc: "Colorés, méchés, bouclés ou naturels — la protéine s'adapte à la fibre.",
+        desc: "Colorés, méchés, bouclés ou naturels — la formule est conçue pour accompagner les besoins de différents types de cheveux.",
       },
     ],
   },
@@ -73,23 +78,23 @@ export const fr = {
     items: [
       {
         name: "Huile d'argan",
-        desc: "L'or liquide du Souss : elle referme l'écaille et donne à la fibre son fini soyeux.",
+        desc: "L'or liquide du Souss : riche en huile d'argan marocaine, la formule aide à nourrir les longueurs et à améliorer leur brillance.",
       },
       {
         name: "Aloe vera",
-        desc: "Elle fait entrer l'hydratation dans la fibre et apaise le cuir chevelu au passage.",
+        desc: "L'aloe vera aide à maintenir l'hydratation et à améliorer la douceur des cheveux.",
       },
       {
         name: "Protéine brésilienne",
-        desc: "Hydrolysée pour pénétrer la fibre et en combler les brèches, au lieu de la couvrir.",
+        desc: "Hydrolysée pour pénétrer la fibre et contribuer à améliorer son apparence, au lieu de la couvrir.",
       },
       {
         name: "Kératine",
-        desc: "La protéine dont le cheveu est fait : elle lisse et redonne du corps.",
+        desc: "La protéine qui compose le cheveu : elle aide à lisser la fibre et à lui redonner du corps.",
       },
       {
         name: "Panthénol",
-        desc: "Pro-vitamine B5 : retient l'hydratation au cœur du cheveu, lavage après lavage.",
+        desc: "Provitamine B5 : elle aide à maintenir l'hydratation et à améliorer la douceur des cheveux, lavage après lavage.",
       },
       {
         name: "Acides aminés de soie",
@@ -98,25 +103,25 @@ export const fr = {
     ],
   },
   benefits: {
-    title: "Pourquoi il fait la différence",
+    title: "Ce qui fait la différence",
     subtitle: "Une formule professionnelle pensée pour des résultats visibles et durables",
     // order matches ICONS[] in components/Benefits.tsx
     items: [
       {
         title: "Douceur soyeuse, anti-frisottis",
-        desc: "La fibre se referme : les frisottis se calment et le brushing tient bien plus longtemps.",
+        desc: "La formule aide à réduire les frisottis : les cheveux sont plus faciles à discipliner et le brushing tient plus longtemps.",
       },
       {
-        title: "Brillance miroir",
+        title: "Brillance et éclat",
         desc: "L'argan donne un fini lumineux qui accroche la lumière dès la première application.",
       },
       {
-        title: "Hydratation profonde",
-        desc: "L'aloe vera hydrate au cœur de la fibre, là où les huiles seules restent en surface.",
+        title: "Hydratation",
+        desc: "L'aloe vera aide à maintenir l'hydratation, là où les huiles seules restent en surface.",
       },
       {
-        title: "Format Salon 1 L",
-        desc: "Le vrai format professionnel : des dizaines d'applications, des mois d'utilisation.",
+        title: "Format professionnel 1 L",
+        desc: "Le vrai format de salon : des dizaines d'applications, des mois d'utilisation.",
       },
     ],
   },
@@ -124,66 +129,66 @@ export const fr = {
     eyebrow: "Argan du Maroc",
     title: "L'or du Souss, la science du Brésil",
     subtitle:
-      "L'huile d'argan est notre trésor : les Marocaines l'utilisent depuis des générations pour nourrir leurs cheveux. Vitasilk la marie à la protéine brésilienne, qui lui donne enfin de quoi tenir dans la durée.",
+      "L'huile d'argan est notre trésor : les Marocaines l'utilisent depuis des générations pour nourrir leurs cheveux. Vitasilk la marie à la protéine brésilienne, pour un résultat qui se maintient dans la durée.",
   },
   beforeAfter: {
-    title: "Avant / Après",
-    subtitle: "Faites glisser pour voir la transformation",
+    title: "Avant / après : découvrez la transformation",
+    subtitle: "Faites glisser le curseur",
     before: "Avant",
     after: "Après",
   },
   howto: {
-    title: "3 gestes, résultat salon",
+    title: "3 gestes pour un résultat digne d'un salon",
     steps: [
       {
         title: "Lavez",
-        desc: "Lavez avec un shampooing clarifiant, puis essorez sans sécher complètement.",
+        desc: "Lavez les cheveux avec un shampooing clarifiant, puis essorez-les délicatement sans les sécher complètement.",
       },
       {
         title: "Appliquez",
-        desc: "Appliquez le Blue Silk mèche par mèche, laissez poser 20 à 40 minutes.",
+        desc: "Répartissez le produit mèche par mèche — environ 50 à 80 ml selon la longueur — et respectez le temps de pose : 20 à 40 minutes.",
       },
       {
         title: "Rincez & coiffez",
-        desc: "Rincez, séchez, puis passez le fer pour sceller la protéine. Admirez la brillance.",
+        desc: "Rincez abondamment selon les instructions, puis séchez et coiffez les cheveux.",
       },
     ],
   },
   testimonials: {
     title: "Elles l'ont adopté",
-    subtitle: "+12 000 clientes satisfaites au Maroc",
+    subtitle: "Plus de 12 000 clientes satisfaites au Maroc",
     items: [
       {
         name: "Salma — Casablanca",
-        text: "J'ai les cheveux bouclés et secs, et le démêlage était une bataille tous les matins. Depuis, le peigne passe tout seul — c'est ça qui a changé mes matins, pas seulement la brillance.",
+        text: "J'ai les cheveux bouclés et secs, et le démêlage était une bataille tous les matins. Depuis, le peigne passe beaucoup plus facilement — c'est ça qui a changé mes matins, pas seulement la brillance.",
       },
       {
         name: "Imane — Rabat",
-        text: "Ce qui m'a convaincue c'est l'argan. On connaît toutes son effet, mais là il tient vraiment : mes cheveux sont encore doux au troisième lavage.",
+        text: "Ce qui m'a convaincue, c'est l'argan. On connaît toutes son effet, et là il tient vraiment : mes cheveux sont encore doux au troisième lavage.",
       },
       {
         name: "Khadija — Marrakech",
-        text: "Je suis coiffeuse et je l'utilise en cabine toute la journée. Aucune vapeur qui pique, et mes clientes remarquent la douceur avant même que je sorte le fer.",
+        text: "Je suis coiffeuse et je l'utilise en cabine. L'application est confortable, et mes clientes remarquent la douceur avant même que je sorte le fer.",
       },
       {
         name: "Sara — Tanger",
-        text: "Avec l'humidité de Tanger, mes cheveux gonflaient à peine sortie de chez moi. Depuis le Blue Silk, ils restent lisses toute la journée.",
+        text: "Avec l'humidité de Tanger, mes cheveux gonflaient à peine sortie de chez moi. Depuis le Blue Silk, ils restent bien plus disciplinés toute la journée.",
       },
     ],
   },
   offer: {
     title: "Offre spéciale",
     subtitle: "Stock limité — profitez du prix spécial",
-    unit: "Blue Silk — Protéine Brésilienne à l'Argan 1 L",
-    save: (pct: number) => `Économisez ${pct}%`,
+    unit: "Blue Silk — protéine brésilienne à l'argan 1 L",
+    save: (pct: number) => `Économisez ${pct} %`,
     freeDelivery: "Livraison gratuite",
     cod: "Paiement à la livraison",
     guarantee: "Satisfaite ou remboursée",
-    countdown: { title: "L'offre expire dans", h: "Heures", m: "Minutes", s: "Secondes" },
+    countdown: { title: "L'offre expire dans :", h: "Heures", m: "Minutes", s: "Secondes" },
     cta: "Commander maintenant",
   },
   form: {
-    title: "Commandez maintenant",
+    title: "Commander maintenant",
     subtitle:
       "Remplissez le formulaire — nous vous appelons pour confirmer. Paiement à la livraison.",
     name: "Nom complet",
@@ -203,7 +208,7 @@ export const fr = {
     errorText:
       "Vérifiez votre connexion et réessayez, ou commandez directement sur WhatsApp — votre commande est conservée.",
     retry: "Réessayer",
-    whatsapp: "Commander sur WhatsApp",
+    whatsapp: "Commander via WhatsApp",
     errors: {
       name: "Veuillez entrer votre nom",
       phone: "Numéro de téléphone invalide",
@@ -215,23 +220,35 @@ export const fr = {
     items: [
       {
         q: "Contient-il du formol ou de l'acide glyoxylique ?",
-        a: "Non, ni l'un ni l'autre. Le Blue Silk est un soin protéiné : il reconstruit et discipline la fibre sans ces substances et sans vapeurs irritantes.",
+        a: "Le Blue Silk ne contient aucune de ces deux substances. C'est un soin protéiné : il aide à discipliner et à améliorer l'apparence de la fibre sans elles et sans vapeurs irritantes. La liste complète des ingrédients figure sur l'étiquette du flacon.",
       },
       {
         q: "Est-ce un lissage ou un soin ?",
-        a: "C'est un soin protéiné. Il discipline nettement les frisottis et facilite le coiffage, mais son rôle premier est de reconstruire et d'hydrater la fibre — pas de transformer une chevelure bouclée en cheveux raides.",
+        a: "C'est un soin protéiné. Il aide nettement à réduire les frisottis et à faciliter le coiffage, mais son rôle premier est d'hydrater et d'améliorer l'apparence de la fibre — pas de transformer une chevelure bouclée en cheveux raides.",
       },
       {
-        q: "Convient-il aux cheveux colorés ?",
-        a: "Oui, et c'est même là qu'il est le plus utile : la coloration vide la fibre de ses protéines et soulève l'écaille, exactement ce que cette formule vient recharger et refermer. Elle ne dégrade pas la couleur.",
+        q: "Convient-il à tous les types de cheveux ?",
+        a: "Il convient aux cheveux colorés, méchés, bouclés ou naturels, et il est particulièrement utile sur cheveux colorés ou poreux. Sur cheveux décolorés ou très fragilisés, réduisez le temps de pose et testez d'abord sur une mèche.",
       },
       {
-        q: "À quelle fréquence l'utiliser ?",
-        a: "Une application toutes les 4 à 6 semaines suffit. Sur cheveux très secs ou très abîmés, deux applications à quinze jours d'intervalle pour démarrer, puis on espace.",
+        q: "Faut-il faire un test avant la première utilisation ?",
+        a: "Oui. Appliquez une petite quantité derrière l'oreille et sur une mèche discrète 48 h avant, et vérifiez qu'aucune réaction n'apparaît. Ce test est recommandé pour tout soin capillaire professionnel.",
+      },
+      {
+        q: "Quelle quantité utiliser, et à quelle fréquence ?",
+        a: "Environ 50 à 80 ml par application sur cheveux mi-longs, davantage sur cheveux longs ou épais. Une application toutes les 4 à 6 semaines suffit. Sur cheveux très secs, deux applications à quinze jours d'intervalle pour démarrer, puis on espace.",
+      },
+      {
+        q: "Combien d'applications le format de 1 L permet-il ?",
+        a: "Selon la longueur et l'épaisseur des cheveux, comptez 12 à 20 applications — plusieurs mois d'utilisation.",
+      },
+      {
+        q: "Quelles précautions faut-il prendre ?",
+        a: "Réservé à un usage externe. Évitez le contact avec les yeux, aérez la pièce pendant le passage du fer, et n'utilisez pas le produit sur un cuir chevelu irrité ou lésé. Tenir hors de portée des enfants.",
       },
       {
         q: "Comment se passe la livraison ?",
-        a: "Livraison gratuite partout au Maroc en 24 à 48h. Vous payez uniquement à la réception de votre commande.",
+        a: "Livraison gratuite partout au Maroc en 24 à 48 h. Vous payez uniquement à la réception de votre commande.",
       },
     ],
   },
