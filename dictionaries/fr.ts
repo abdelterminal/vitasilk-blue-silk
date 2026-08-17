@@ -15,7 +15,7 @@
 // promise; the hedged wording is the version that was signed off.
 
 export const fr = {
-  announce: "Livraison gratuite partout au Maroc — Paiement à la livraison",
+  announce: "Livraison gratuite partout au Maroc — paiement à la livraison",
   nav: { brand: "Vitasilk", cta: "Commander" },
   hero: {
     eyebrow: "Vitasilk Professional",
@@ -26,7 +26,7 @@ export const fr = {
     cta: (price: string) => `Commander — ${price}`,
     badge1: "0 % de formol",
     badge2: "1 L — format professionnel",
-    badge3: "Argan & aloe vera",
+    badge3: "Argan et aloe vera",
     scroll: "Découvrir",
   },
   marquee: [
@@ -149,7 +149,7 @@ export const fr = {
         desc: "Répartissez le produit mèche par mèche — environ 50 à 80 ml selon la longueur — et respectez le temps de pose : 20 à 40 minutes.",
       },
       {
-        title: "Rincez & coiffez",
+        title: "Rincez et coiffez",
         desc: "Rincez abondamment selon les instructions, puis séchez et coiffez les cheveux.",
       },
     ],
